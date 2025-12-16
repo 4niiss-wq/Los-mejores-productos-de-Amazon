@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head> 
+        <Meta charset="UTF-8">
+            <title>Mejores Productos</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="mipagina.css">  
+       <link rel="icon" type="image/png" href="descartados y logo/ChatGPT Image 16 dic 2025, 14_01_31.png">
+
+    </head>
+
+
+    <body>
+
+<div class="wan">
+    <img src="descartados y logo/ChatGPT Image 16 dic 2025, 14_01_31.png" class="img1" alt="Logo">
+ <nav>
+  <h1 class="nos"><a href="sobrenosotros.html">Sobre Nosotros</a></h1>
+
+    <h1 class="ini"><a href="index.html">Inicio</a></h1>
+
+
+    <div class="menu">
+                <h1 class="cate"><span>Categoría</span></h1>
+
+        <div class="desple">
+            <a href="tecnologia.html">Tecnología</a>
+            <a href="accesorios.html">Accesorios</a>
+            <a href="anime.html">Anime</a>
+            <a href="hogar.html">Hogar</a>
+            <a href="ropa.html">Ropa</a>
+        </div>
+    </div>
+</nav>
+<div class="pros">
+    <h2 class="pro">Artículos Destacados</h2>
+  </div>
+
+  <div class="carrusel" id="carrusel">
+
+  <button class="btn-carrusel left">&#10094;</button>
+
+  <div class="carrusel-ventana">
+    <div class="carrusel-track">
+
+      <div class="producto"><img class="imgwan" src="descartados y logo/cuchillodestaamazon1.png"><p>Cuchillo de chef de 8 pulgadas ideal para un corte preciso y cómodo.
+Diseñado para un uso práctico en la cocina diaria.
+</p><a href="https://a.co/d/hvA1W8w" target="_blank">Ver en Amazon</a></div>
+
+      <div class="producto"><img class="imgwan" src="descartados y logo/comboboxersdestaamazn2.png"><p>Bóxers para hombre cómodos y transpirables, ideales para uso diario.
+Ayudan a mantener la frescura y ofrecen un ajuste confortable.
+</p><a href="https://a.co/d/03fTauq" target="_blank">Ver en Amazon</a></div>
+
+      <div class="producto"><img class="imgwan" src="descartados y logo/vestidoverdedesta.png"><p>Vestido halter brillante ideal para fiestas y eventos nocturnos.
+Diseño elegante y llamativo para destacar en ocasiones especiales.
+</p><a href="https://a.co/d/796a66J" target="_blank">Ver en Amazon</a></div>
+
+      <div class="producto"><img class="imgwan" src="descartados y logo/llaverodlufydesta.png"><p>Llavero de anime con diseño llamativo, ideal para llaves o teléfono.
+Un accesorio divertido para fans del anime.
+</p><a href="https://a.co/d/7cEmKRf" target="_blank">Ver en Amazon</a></div>
+
+      <div class="producto"><img class="imgwan" src="descartados y logo/abrigodgojodesta.png"><p>Sudadera unisex de anime con diseño moderno y cómodo.
+Ideal para uso diario y fans del estilo Harajuku.
+</p><a href="https://a.co/d/6rIzvr7"target="_blank">Ver en Amazon</a></div>      
+
+      <div class="producto"><img class="imgwan" src="descartados y logo/bandejazuldecorativdestaAmazn.png"><p>Bandeja decorativa elegante para llaves, joyas o pequeños objetos.
+Aporta un toque moderno y ordenado al hogar.
+</p><a href="https://a.co/d/cI7GvSU" target="_blank">Ver en Amazon</a></div>
+
+      <div class="producto"><img class="imgwan" src="descartados y logo/cadenademujerazuldestaAmazn.png"><p>Collar elegante con diseño de corazón, ideal como regalo especial.
+Aporta un estilo delicado y significativo.
+</p><a href="https://a.co/d/hm6ABhm" target="_blank">Ver en Amazon</a></div>
+
+      <div class="producto"><img class="imgwan" src="descartados y logo/purificadordesta.png"><p>Purificador de aire potente ideal para habitaciones grandes.
+Ayuda a mantener el aire limpio y fresco en el hogar.
+</p><a href="https://a.co/d/1JGiUU7" target="_blank">Ver en Amazon</a></div>
+
+ <div class="producto"><img class="imgwan" src="descartados y logo/reloj2dhombredestaAmazn.png"><p>Reloj analógico para hombre con diseño clásico y elegante.
+Ideal para uso diario o estilo formal.
+
+</p><a href="https://a.co/d/0vvBWs8" target="_blank">Ver en Amazon</a></div>
+
+
+    </div>
+  </div>
+
+  <button class="btn-carrusel right">&#10095;</button>
+
+</div>
+
+<script>
+const track = document.querySelector(".carrusel-track");
+const productos = document.querySelectorAll(".producto");
+const carrusel = document.getElementById("carrusel");
+const btnLeft = document.querySelector(".btn-carrusel.left");
+const btnRight = document.querySelector(".btn-carrusel.right");
+
+let index = 0;
+let ancho = productos[0].offsetWidth + 20;
+let intervalo;
+
+function moverCarrusel() {
+  index++;
+  if (index > productos.length - 3) {
+    index = 0;
+  }
+  track.style.transform = `translateX(-${index * ancho}px)`;
+}
+
+function iniciarAuto() {
+  intervalo = setInterval(moverCarrusel, 3000);
+}
+
+function detenerAuto() {
+  clearInterval(intervalo);
+}
+
+btnRight.addEventListener("click", () => {
+  moverCarrusel();
+});
+
+btnLeft.addEventListener("click", () => {
+  index--;
+  if (index < 0) {
+    index = productos.length - 3;
+  }
+  track.style.transform = `translateX(-${index * ancho}px)`;
+});
+
+carrusel.addEventListener("mouseenter", detenerAuto);
+carrusel.addEventListener("mouseleave", iniciarAuto);
+
+iniciarAuto();
+</script>
+
+<div class="invisible">
+
+</div>
+  
+
+        
+    </body>
+</html>
